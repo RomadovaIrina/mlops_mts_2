@@ -9,7 +9,7 @@ from src.scorer import make_pred
 
 DATA_DIR = '/app/tmp_data'
 
-def batch_processor(train_df, producer, batch_size=10, interval=5):
+def batch_processor(train_df, producer, batch_size=16, interval=5):
     os.makedirs(DATA_DIR, exist_ok=True)
     while True:
         files = sorted(os.listdir(DATA_DIR))
